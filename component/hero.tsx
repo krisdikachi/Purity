@@ -1,63 +1,55 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Info } from 'lucide-react';
+import { ArrowRight, Facebook, Instagram, MessageCircle, MailCheck } from 'lucide-react';
+
 
 const Hero = () => {
   return (
-    <section id="home" className="relative py-20 lg:py-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Embrace a Life of
-                <span className="text-[#2ecc17]"> Purity</span>
-              </h2>
-              <p className="text-xl text-gray-600 leading-relaxed">
-                Join a supportive community dedicated to promoting sexual purity and healthy relationships through guidance, resources, and fellowship.
-              </p>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all">
-                Get Involved
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button variant="outline" size="lg" className="border-2 border-gray-300 hover:border-blue-600 px-8 py-3 rounded-lg font-semibold transition-all">
-                <Info className="mr-2 h-5 w-5" />
-                Learn More
-              </Button>
-            </div>
+    <section id="home" className="RoyalPuritanHero">
+      <div className="RoyalPuritanLeftHero">
+        <h1 className="text-4xl font-bold mb-4 mono-cursive">
+          Empowering Youth Through <span className="text-[#F8BD57]">Sexual Purity</span>
+        </h1>
+        <p className="text-lg mb-6 leading-relaxed max-w-xl">
+          Guiding young hearts toward a Christ-centered journey of purity through
+          faith-based education and mentorship. Join us in raising a generation that
+          lives unashamedly for Jesus.
+        </p>
+        <div className="social-icons-bottom-left w-56 flex justify-between items-center mt-8 border-l-4 border-[#AA06BF] pl-4 py-2">
+          <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" className="mr-4 text-[#AA06BF] hover:text-[#F8BD57] transition-colors duration-300">
+            <Facebook size={32} />
+          </a>
+          <a href="https://instagram.com/yourpage" target="_blank" rel="noopener noreferrer" className="mr-4 text-[#AA06BF] hover:text-[#F8BD57] transition-colors duration-300">
+            <Instagram size={32} />
+          </a>
 
-            <div className="grid grid-cols-3 gap-8 pt-8">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-600">1000+</div>
-                <div className="text-gray-600">Lives Impacted</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-600">15+</div>
-                <div className="text-gray-600">Programs</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-600">25+</div>
-                <div className="text-gray-600">Years of Service</div>
-              </div>
-            </div>
-          </div>
+          <a href="https://mail.google.com/mail/u/0/?fs=1&to=youremail@gmail.com&su=Subject&body=Body" target="_blank" rel="noopener noreferrer" className="text-[#AA06BF] hover:text-[#F8BD57] transition-colors duration-300">
+            <MailCheck size={32} />
+          </a>
 
-          <div className="relative">
-            <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img 
-                src="/path.png"
-                alt="A person walking on a path towards light"
-                className="w-full h-[500px] object-cover"
-              />
-            </div>
-          </div>
+          <a href="https://messagingplatform.com/yourpage" target="_blank" rel="noopener noreferrer" className="text-[#AA06BF] hover:text-[#F8BD57] transition-colors duration-300 ml-2">
+            <MessageCircle size={32} />
+          </a>
+
         </div>
+        <Button className=" heroBtn bg-[#e8e7e5] hover:bg-[#f8bd57] text-[#1c0f57] w-48 transition-all duration-300">
+          Start Your Journey <ArrowRight className="ml-2" />
+        </Button>
+
       </div>
+      <div className="RoyalPuritanRightHero"></div>
+
     </section>
+
   );
 };
 
 export default Hero;
+
+
+
+
+
+
+
+

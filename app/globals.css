@@ -1,9 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
 @custom-variant dark (&:is(.dark *));
 
-@theme inline {
+ @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -44,6 +45,10 @@
 }
 
 :root {
+  --rp-purple: #AA06BF;
+  --rp-darkpurple: #1C0F57;
+  --rp-white:    #E8E7E5;
+  --rp-goldenyellow: #F8BD57;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
@@ -118,5 +123,93 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Courier New', Courier, monospace
+  }
+}
+
+.mono-cursive {
+  font-family: 'Courier New', Courier, monospace;
+}/* ...existing code... */
+
+.RoyalPuritanHero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #1c0f57; /* #1c0f57 with opacity */
+  display: flex;
+  overflow: hidden;
+}
+
+.RoyalPuritanLeftHero {
+  position: relative;
+  margin-top: -50px;
+  width: 50%;
+  height: 100%;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  z-index: 10;
+
+}
+.social-icons-bottom-left {
+  position: absolute;
+  bottom: 1rem;
+  left: 4rem;   
+  display: flex;
+}
+
+.RoyalPuritanRightHero {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-image: url('/ROYAL_PURITAN_FOUNDATION_logo.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  -webkit-clip-path: circle(60% at 60% 60%);
+  clip-path: circle(60% at 60% 60%);
+  
+}
+
+.RoyalPuritanSocials {
+  opacity: 1;
+  background-color: red;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.RoyalPuritanSocials a:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-in-out;
+}
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+  .RoyalPuritanLeftHero {
+    width: 100%;
+    padding: 2rem;
+  }
+  
+  .RoyalPuritanRightHero {
+    width: 100%;
+    opacity: 0.2;
+  }
+  .heroBtn{
+    margin-top: 50px;
   }
 }

@@ -1,17 +1,22 @@
 
 
 import * as React from 'react';
-import { Shield, Phone, Mail, MapPin, Facebook, Instagram, Youtube } from 'lucide-react';
+import Image from 'next/image';
+import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-gray-900 text-white py-12">
+    <footer id="contact" className="bg-[#1c0f57] text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <Shield className="h-8 w-8 text-blue-400" />
-              <h3 className="text-xl font-bold">Purity Foundation</h3>
+              <Image src="/ROYAL_PURITAN_FOUNDATION_logo.jpg"
+                alt="ROYAL_PURITAN_FOUNDATION_logo.jpg"
+                width={50}
+                height={50}
+              />
+              <h3 className="text-xl font-bold">Royal Puritan Foundation</h3>
             </div>
             <p className="text-gray-300">
               A community dedicated to supporting individuals in their journey towards sexual integrity and wholeness.
@@ -69,7 +74,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 Purity Foundation. All rights reserved. | 
+            © 2024 Purity Foundation. All rights reserved. |
             <span className="text-blue-400"> Committed to supporting our community</span>
           </p>
         </div>

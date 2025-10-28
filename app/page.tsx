@@ -12,9 +12,9 @@ export default function Home() {
    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       <Header />
       <Hero />
+            <Mission />
       <ServiceTimes />
       <UpcomingEvents />
-      <Mission />
       <JoinUs />
       <SermonArchives />
       <Footer />
